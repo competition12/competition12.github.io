@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Consumer Healthcare Project</title>
+    <script src="competition.js"></script>
+    <link rel="stylesheet" type="text/css" href="competition.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo+Black|Bangers|Cabin|Farro|Hind+Madurai|News+Cycle&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <script></script>
+  <script>
+    /** Instructions **/
+    function load() {
+      var instructions = document.getElementById("instructions");
+      var comp = document.getElementById("competition");
+      var col = document.getElementById("collaboration");
+      var comp_step = document.getElementById("comp_step");
+      var col_step = document.getElementById("col_step");
+      var count = (document.getElementById("comp_step").innerHtml = "3..2..1");
+      var system = document.getElementById("system");
+      var user = document.getElementById("user");
+    }
+
+    function comp() {
+      instructions.style.display = "none";
+      comp_step.style.display = "block";
+    }
+
+    function col() {
+      instructions.style.display = "none";
+      col_step.style.display = "block";
+    }
+
+    function start() {
+      comp_step.style.display = "none";
+      document.getElementById("letters").style.display = "block";
+      document.getElementById("letters_text").style.display = "block";
+      document.getElementById("ready").style.display = "block";
+    }
+
+    function start_collab() {
+      col_step.style.display = "none";
+      document.getElementById("letters").style.display = "block";
+      document.getElementById("letters_text").style.display = "block";
+      document.getElementById("ready_collab").style.display = "block";
+    }
+
+    function ready() {
+      document.getElementById("letters").style.display = "none";
+      document.getElementById("letters_text").style.display = "none";
+      document.getElementById("ready").style.display = "none";
+      document.getElementById("question-1c").style.display = "block";
+      system.classList.add("system");
+    }
+
+    function true1c() {
+      var pos = 0;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-1c").style.display = "none";
+      document.getElementById("question-2c").style.display = "block";
+    }
+
+    function false2c() {
+      var pos = 200;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-2c").style.display = "none";
+      document.getElementById("question-3c").style.display = "block";
+    }
+
+    function true3c() {
+      var pos = 400;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-3c").style.display = "none";
+      document.getElementById("question-4c").style.display = "block";
+    }
+
+    function false4c() {
+      var pos = 600;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-4c").style.display = "none";
+      document.getElementById("question-5c").style.display = "block";
+    }
+
+    function true5c() {
+      var pos = 800;
+      pos += 400;
+      user.style.left = pos + "px";
+      document.getElementById("question-5c").style.display = "none";
+      document.getElementById("winning-message").style.display = "inline-flex";
+    }
+
+    function ready_collab() {
+      document.getElementById("letters").style.display = "none";
+      document.getElementById("letters_text").style.display = "none";
+      document.getElementById("ready_collab").style.display = "none";
+      document.getElementById("question-1").style.display = "block";
+    }
+
+    function true1() {
+      var pos = 0;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-1").style.display = "none";
+      document.getElementById("question-1a").style.display = "block";
+    }
+
+    function false1a() {
+      var pos = 0;
+      pos += 200;
+      system.style.left = pos + "px";
+      document.getElementById("question-1a").style.display = "none";
+      document.getElementById("question-2").style.display = "block";
+    }
+
+    function false2() {
+      var pos = 200;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-2").style.display = "none";
+      document.getElementById("question-2a").style.display = "block";
+    }
+
+    function false2a() {
+      var pos = 200;
+      pos += 200;
+      system.style.left = pos + "px";
+      document.getElementById("question-2a").style.display = "none";
+      document.getElementById("question-3").style.display = "block";
+    }
+
+    function true3() {
+      var pos = 400;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-3").style.display = "none";
+      document.getElementById("question-3a").style.display = "block";
+    }
+
+    function true3a() {
+      var pos = 400;
+      pos += 200;
+      system.style.left = pos + "px";
+      document.getElementById("question-3a").style.display = "none";
+      document.getElementById("question-4").style.display = "block";
+    }
+
+    function false4() {
+      var pos = 600;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-4").style.display = "none";
+      document.getElementById("question-4a").style.display = "block";
+    }
+
+    function false4a() {
+      var pos = 600;
+      pos += 200;
+      system.style.left = pos + "px";
+      document.getElementById("question-4a").style.display = "none";
+      document.getElementById("question-5").style.display = "block";
+    }
+
+    function true5() {
+      var pos = 800;
+      pos += 200;
+      user.style.left = pos + "px";
+      document.getElementById("question-5").style.display = "none";
+      document.getElementById("question-5a").style.display = "block";
+    }
+
+    function false5a() {
+      var pos = 800;
+      pos += 400;
+      system.style.left = pos + "px";
+      document.getElementById("question-5a").style.display = "none";
+      document.getElementById("winning-team-message").style.display =
+        "inline-flex";
+    }
+
+    function menu() {
+      document.getElementById("instructions").style.display = "block";
+      document.getElementById("winning-message").style.display = "none";
+      document.getElementById("winning-team-message").style.display = "none";
+      system.classList.remove("system");
+      system.style.left = 0 + "px";
+      user.style.left = 0 + "px";
+    }
+
+    window.onload = load;
+  </script>
+  <body>
+    <div id="container">
+      <div id="instructions">
+        <h2>Instructions</h2>
+        <ol>
+          <li class="step">The character at the <b>TOP</b> is <b>YOU</b></li>
+          <li class="step">
+            The character at the <b>BOTTOM</b> is <b>YOUR COMPETITOR</b>
+          </li>
+          <li class="step">You need to beat them to 50 points</li>
+        </ol>
+        <button id="competition" class="btn btn-primary" onclick="comp()">
+          START
+        </button>
+      </div>
+      <div id="comp_step" style="display:none">
+        <h4>COMPETITION</h4>
+        <ol>
+          <li class="step">
+            You need to reach the destination before your competitor does
+          </li>
+          <li class="step">
+            The way you do it is by answering TRUE or FALSE questions about a
+            random set of letters
+          </li>
+          <li class="step">Ready to try?</li>
+          <br />
+          <div id="competition" class="start btn btn-primary" onclick="start()">
+            LET'S GO
+          </div>
+        </ol>
+      </div>
+      <div id="ready">
+        <div
+          class="btn btn-primary"
+          style="margin-right: -50px"
+          onclick="ready()"
+        >
+          I'M READY
+        </div>
+      </div>
+      <img id="point" src="points2.png" />
+      <img id="user" src="animal.gif" />
+      <div id="letters_text">
+        Remember the position of these letters (write them down if you need to)
+      </div>
+      <br />
+      <img id="letters" src="PUSAK.png" />
+      <div id="question-1c">
+        <div class="question">The first letter is 'P'.</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true1c()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false1c()">FALSE</button>
+      </div>
+
+      <div id="question-2c">
+        <div class="question">The second letter is 'X'.</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true2c()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false2c()">FALSE</button>
+      </div>
+
+      <div id="question-3c">
+        <div class="question">The third letter is 'S'.</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true3c()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false3c()">FALSE</button>
+      </div>
+
+      <div id="question-4c">
+        <div class="question">The fourth letter is 'Z'.</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true4c()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false4c()">FALSE</button>
+      </div>
+
+      <div id="question-5c">
+        <div class="question">The fifth letter is 'K'.</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true5c()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false5c()">FALSE</button>
+      </div>
+      <div id="question-1">
+        <div class="question">Was the first letter 'P'?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true1()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false1()">FALSE</button>
+      </div>
+      <div id="question-1a">
+        <div class="question">There were 6 six letters in total?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true1a()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false1a()">FALSE</button>
+      </div>
+      <div id="question-2">
+        <div class="question">Was the second letter 'X'?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true2()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false2()">FALSE</button>
+      </div>
+      <div id="question-2a">
+        <div class="question">There were 7 six letters in total?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true2a()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false2a()">FALSE</button>
+      </div>
+      <div id="question-3">
+        <div class="question">Was the third letter 'S'?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true3()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false3()">FALSE</button>
+      </div>
+      <div id="question-3a">
+        <div class="question">There were 5 six letters in total?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true3a()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false3a()">FALSE</button>
+      </div>
+      <div id="question-4">
+        <div class="question">Was the fourth letter 'Z'?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true4()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false4()">FALSE</button>
+      </div>
+      <div id="question-4a">
+        <div class="question">Does the letter 'A' appears twice?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true4a()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false4a()">FALSE</button>
+      </div>
+      <div id="question-5">
+        <div class="question">Was the fifth letter 'K'?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true5()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false5()">FALSE</button>
+      </div>
+      <div id="question-5a">
+        <div class="question">Does the letter 'K' appears twice?</div>
+        <br />
+        <button class="true btn btn-primary" onclick="true5a()">TRUE</button>
+        <button class="false btn btn-primary" onclick="false5a()">FALSE</button>
+      </div>
+      <div id="winning-message">
+        GREAT JOB. YOU SCORED 50 POINTS.<br />
+        <button class="true btn btn-primary" onclick="menu()">MAIN MENU</button>
+      </div>
+      <div id="winning-team-message">
+        GREAT JOB. YOUR TEAM WON.<br />
+        <button class="true btn btn-primary" onclick="menu()">MAIN MENU</button>
+      </div>
+      <img id="system" src="system.gif" />
+    </div>
+  </body>
+</html>
