@@ -1,86 +1,94 @@
 .carousel-inner {
-  background-color: #fff;
-}
-
-.carousel {
-  background: #2f4357;
-  margin-top: 20px;
-}
-.carousel-item {
-  text-align: center;
-  min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
-}
-.bs-example {
-  margin: 20px;
-}
-
-/* System Avatar */
-
-.letter {
-  height: 100px;
-  width: 100px;
-}
-.system {
-  transform: scaleX(-1);
-  height: 400px;
-  width: 600px;
-  margin-left: 10%;
-}
-
-.system-move {
-  transform: scaleX(-1);
-  height: 400px;
-  width: 600px;
-  margin-left: 10%;
-  animation: mymove 5s infinite;
-}
-
-@-webkit-keyframes mymove {
-  from {
+    background-color: #fff;
+  }
+  
+  .carousel {
+    background: #2f4357;
+    margin-top: 20px;
+  }
+  .carousel-item {
+    text-align: center;
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+  }
+  .bs-example {
+    margin: 20px;
+  }
+  
+  /* System Avatar */
+  
+  .letter {
+    height: 100px;
+    width: 100px;
+  }
+  .system {
+    height: 400px;
+    width: 900px;
     margin-left: 10%;
   }
-  to {
-    margin-left: 50%;
-  }
-}
-
-@keyframes mymove {
-  from {
+  
+  .system-move {
+    height: 400px;
+    width: 900px;
     margin-left: 10%;
+    animation: mymove 5s infinite;
   }
-  to {
-    margin-left: 50%;
+  
+  @-webkit-keyframes mymove {
+    from {
+      margin-left: 10%;
+    }
+    to {
+      margin-left: 50%;
+    }
   }
-}
+  
+  @keyframes mymove {
+    from {
+      margin-left: 10%;
+    }
+    to {
+      margin-left: 50%;
+    }
+  }
+  
+  .instruction {
+    margin-left: -20%;
+    /* display: inline-flex;*/
+  }
+  
+  /* Instructions */
+  
+  .text {
+    margin-top: 10%;
+    margin-left: 15%;
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+    font-weight: inherit;
+    text-align: center;
+  }
 
-.instruction {
-  margin-left: -20%;
-  /* display: inline-flex;*/
-}
-
-/* Instructions */
-
-.text {
-  margin-top: 10%;
-  margin-left: 15%;
-  font-size: 50px;
-  font-family: Arial, sans-serif;
-  font-weight: inherit;
-  text-align: center;
-}
-
-/* Alphabets */
-
-.A {
-  height: 100px;
-  margin-left: 15%;
-}
-
-.true {
-  left: 50%;
-  top: 50 !important;
-}
-
-.false {
-  right: 50%;
-}
+  .play
+  {
+    margin-top: 5%;
+    margin-left: 15%;
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+    font-weight: inherit;
+    text-align: center;
+  }
+  
+  /* Alphabets */
+  
+  .A {
+    height: 100px;
+    margin-left: 15%;
+  }
+  
+  .true {
+    left: 50%;
+    top: 50 !important;
+  }
+  
+  .false {
+    right: 50%;
+  }
