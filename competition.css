@@ -32,6 +32,14 @@
   margin-top: 10%;
 }
 
+#losing-message {
+  display: none;
+  margin-left: 10%;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 10%;
+}
+
 #winning-team-message {
   display: none;
   margin-left: 40%;
@@ -177,7 +185,7 @@
   position: absolute;
   -moz-transition: all 0.8s ease 0s;
   transition: 0.5s ease 0s;
-  margin-top: 400px;
+  margin-top: 350px;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -188,6 +196,8 @@
 
 .system {
   animation: mymove 20s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes mymove {
