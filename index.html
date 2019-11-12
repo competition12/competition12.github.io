@@ -46,6 +46,7 @@
       var count = (document.getElementById("comp_step").innerHtml = "3..2..1");
       var system = document.getElementById("system");
       var user = document.getElementById("user");
+      var message = document.getElementById("losing-message");
     }
 
     function comp() {
@@ -78,6 +79,8 @@
       document.getElementById("ready").style.display = "none";
       document.getElementById("question-1c").style.display = "block";
       system.classList.add("system");
+      var message = document.getElementById("losing-message");
+      message.classList.add("message");
     }
 
     function true1c() {
@@ -246,10 +249,14 @@
           <li class="step">
             You need to answer either TRUE or FALSE.
           </li>
-           <li class="step">
-            Every correct answer is 10 steps.
+          <li class="step">
+            If you reach 50 steps before the competitor, you WIN
           </li>
-          <li class="step">Ready to play?</li>
+          <li class="step">
+            If the competitor reaches 50 steps before you, you LOSE and you need
+            to STOP and keep a note of how many steps you got.
+          </li>
+          <li class="step">Ready to try?</li>
           <br />
           <div id="competition" class="start btn btn-primary" onclick="start()">
             LET'S GO
@@ -368,13 +375,19 @@
       </div>
       <div id="winning-message">
         GREAT JOB. YOU SCORED 50 POINTS.<br />
-        <button class="true btn btn-primary" onclick="window.location.href='https://rit.az1.qualtrics.com/jfe/form/SV_dg5RkhVXp6zbHOR'">
+        <button class="true btn btn-primary" onclick="menu()">
+          Back to Survey
+        </button>
+      </div>
+      <div id="losing-message">
+        YOU LOST THE COMPETITION.<br />
+        <button class="true btn btn-primary" onclick="menu()">
           Back to Survey
         </button>
       </div>
       <div id="winning-team-message">
         GREAT JOB. YOUR TEAM WON.<br />
-        <button class="true btn btn-primary" onclick="window.location.href='https://rit.az1.qualtrics.com/jfe/form/SV_dg5RkhVXp6zbHOR'">
+        <button class="true btn btn-primary" onclick="menu()">
           Back to Survey
         </button>
       </div>
